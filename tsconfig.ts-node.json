@@ -1,0 +1,33 @@
+{
+  /*
+    This tsconfig is used for build with ts-node, not with webpack,
+    so "module" property value is "commonjs", not es2015~.（for tree shaking）
+
+    Following config is for development.（ex. "sourceMap": true）
+  */
+
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2017",
+    "lib": ["es2017"],
+    "module": "commonjs",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "strict": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "typeRoots": ["./node_modules/@types"],
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

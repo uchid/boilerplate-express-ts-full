@@ -1,0 +1,36 @@
+{
+  /*
+    This tsconfig is for resolving experimentalDecorators warning 
+    caused by separate tsconfig.json depending on environment.
+    Also, use when need default tsconfig for some situation.
+
+    Following config is copy of tsconfig.prod.json.
+  */
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es2017"],
+    "module": "es2015",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "strict": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "typeRoots": ["./node_modules/@types"],
+  /* 
+    includes __tests__ directory for resolving module error of vscode.
+    remove it if use this config file, because includes in compiled output to /dist.
+  */
+  "include": ["./src/**/*", "./__tests__/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
