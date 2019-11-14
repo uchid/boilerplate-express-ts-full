@@ -1,7 +1,7 @@
 # boilerplate-express-ts-full
 
-A API boilerplate with Express, TypeScript, webpack, onion architecture.
-This boilerplate is Used Sequelize as ORM for MySQL,
+A API boilerplate with Express, TypeScript, webpack, onion architecture.  
+This boilerplate is Used Sequelize as ORM for MySQL,  
 InversifyJS to implement inversion of control (IoC) of onion architecture.
 
 # Environment
@@ -40,11 +40,11 @@ InversifyJS to implement inversion of control (IoC) of onion architecture.
 
 # Supplement
 
-## Why onion architecture
+## ●Why onion architecture
 
-The onion architecture is architecture that uses the concept of layers.
-For more fundamentals and details, please refer to other documents already exists a lot on the web.
-There are Hexagonal, Clean architecture and so on as other Layered approach, but
+The onion architecture is architecture that uses the concept of layers.  
+For more fundamentals and details, please refer to other documents already exists a lot on the web.  
+There are Hexagonal, Clean architecture and so on as other Layered approach, but  
 I selected this architecture for following reasons.
 
 - On the premise that, wanted to use concept of DDD for decoupling and flexibility.
@@ -52,29 +52,29 @@ I selected this architecture for following reasons.
 - What is important for me is be able to implement IoC, DIP, SOLID etc.
 - If needed, can switch to all-inclusive such as clean arcitecture.
 
-## Tsconfig for webpack or only 'ts' compile & 'node'('ts-node')
+## ●Tsconfig for webpack or only 'ts' compile & 'node'('ts-node')
 
-Comment more infomation to appropriate file if necessary, but use depending on your project environment.
-In this project, set `module: es2015` (import, export) for situation used webpack also considering tree shaking,
+Comment more infomation to appropriate file if necessary, but use depending on your project environment.  
+In this project, set `module: es2015` (import, export) for situation used webpack also considering tree shaking,  
 and set `module: commonjs` for situation used `node` exec.
 
-## Use plugin for running Nodemon with different process
+## ●Use plugin for running Nodemon with different process
 
-For serial execution(&&) and running webpack --watch & Nodemon as a separate process,
-use [Nodemon Webpack Plugin](https://github.com/Izhaki/nodemon-webpack-plugin).
+For serial execution(&&) and running webpack --watch & Nodemon as a separate process,  
+use [Nodemon Webpack Plugin](https://github.com/Izhaki/nodemon-webpack-plugin).  
 (in webpack.dev.js)
 
-## Use special path sequelize config for handling typescript
+## ●Use special path sequelize config for handling typescript
 
-For handling typescript migration & seeder file, path of sequelize config(.sequelizerc) is unusual
-, so be careful if use [sequelize-cli](https://github.com/sequelize/cli) command.
+For handling typescript migration & seeder file, path of sequelize config(.sequelizerc) is unusual  
+, so be careful if use [sequelize-cli](https://github.com/sequelize/cli) command.  
 ex. sequelize model:generate
 
-## If you want to use ts compile and nodemon
+## ●If you want to use ts compile and nodemon
 
-In this project, webpack is used for some reasons, so follow the steps as flow of compile and reload.
-webpack -> typescript -> webpack -> nodemon \*different, to be exact
-Therefore, modify configuration if you use ts compile and watch with nodemon without webpack.
+In this project, webpack is used for some reasons, so follow the steps as flow of compile and reload.  
+webpack -> typescript -> webpack -> nodemon \*different, to be exact  
+Therefore, modify configuration if you use ts compile and watch with nodemon without webpack.  
 ex.
 
 ```
