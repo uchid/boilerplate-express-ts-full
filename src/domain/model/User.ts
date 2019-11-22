@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/explicit-function-return-type: 0*/
 export class User {
   // private isActivate: boolean;
   constructor(
@@ -33,4 +34,13 @@ export class User {
       isActive: this.isActivate,
     };
   }
+}
+
+export interface UserDomainHash {
+  name: string;
+  birthday: Date;
+  id: string | undefined;
+  updatedAt: Date | undefined;
+  createdAt: Date | undefined;
+  isActive: boolean;
 }

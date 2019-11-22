@@ -13,7 +13,7 @@ A API boilerplate with Express, TypeScript, webpack, onion architecture. This bo
 - [webpack](https://webpack.js.org/)
 - [Jest](https://jestjs.io/ja/), [supertest](https://github.com/visionmedia/supertest)
 - [nodemon](https://github.com/remy/nodemon)
-- [tslint-config-airbnb](https://github.com/progre/tslint-config-airbnb)
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 
 # Development
 
@@ -28,7 +28,7 @@ A API boilerplate with Express, TypeScript, webpack, onion architecture. This bo
   yarn run start:dev    # lint & build & start app for development and refresh automatically with each code save
   yarn run start:without-webpack    # for when want to use only TypeScript compile not webpack
   yarn run build:prod   # only build for production etc.
-  yarn run lint         # lint with tslint of airbnb style
+  yarn run lint         # lint with .eslintrc.js(includes prettier rule)
   yarn run test         # test with jest, jest.config.js and ts-jest
   yarn run db:generate:migration [argument of filename]    # generate skelton migration file to src/infrastructure/database/migrations directory
   yarn run db:generate:seeder [argument of filename]    # generate skelton seeder file to src/infrastructure/database/seeders directory
@@ -80,3 +80,7 @@ ex.
   "exec": "yarn run ts-node ./src/index.ts"
 }
 ```
+
+## 【recommend】 Config prettier & linter auto fix/check on timing you want
+
+Set your editor(ex. vscode, sublime, vim, etc.) cofiguration to format(prettier) & check(eslint) syntax on save file if needed. Or exec it(or `eslint --fix` ?) on git commit with githook.

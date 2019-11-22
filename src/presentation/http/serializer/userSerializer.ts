@@ -1,7 +1,7 @@
-import { User } from '../../../domain/model/User';
+import { User, UserDomainHash } from '../../../domain/model/User';
 
 export class UserSerializer {
-  static serialize(user: User | null) {
+  static serialize(user: User | null): UserDomainHash | null {
     if (!user) {
       return null;
     }

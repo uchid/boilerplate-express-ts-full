@@ -1,7 +1,7 @@
 import { User } from '../../domain/model/User';
 
 export const UserConvert = {
-  toEntity(dataValue: UserDataParams) {
+  toEntity(dataValue: UserDataParams): User {
     const { name, birthday, id, updatedAt, createdAt } = dataValue;
     return new User(name, birthday, id, updatedAt, createdAt);
   },

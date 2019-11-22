@@ -25,7 +25,9 @@ export class UserMySqlRepository implements UserRepository {
     return users.map(UserConvert.toEntity);
   }
 
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   async update(_user: User): Promise<User> {
+    /* eslint-enable @typescript-eslint/no-unused-vars */
     throw new Error('[TODO]');
   }
 

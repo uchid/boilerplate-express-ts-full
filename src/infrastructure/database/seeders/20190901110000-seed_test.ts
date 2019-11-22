@@ -1,7 +1,6 @@
+/* eslint @typescript-eslint/explicit-function-return-type:0, @typescript-eslint/no-unused-vars:0 */
 import { QueryInterface, Sequelize } from 'sequelize';
-
 module.exports = {
-  // tslint:disable-next-line:variable-name
   up: async (queryInterface: QueryInterface, _sequelize: Sequelize) => {
     return queryInterface.bulkInsert(
       'Users',
@@ -19,7 +18,6 @@ module.exports = {
     );
   },
 
-  // tslint:disable-next-line:variable-name
   down: async (queryInterface: QueryInterface, _sequelize: Sequelize) => {
     return queryInterface.bulkDelete('Users', {}, {});
   },
