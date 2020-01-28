@@ -5,7 +5,10 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    "prettier/@typescript-eslint",
   ],
   env: { node: true, es6: true },
   plugins: ['@typescript-eslint'],
@@ -25,15 +28,6 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts'],
-      extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended'
-      ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        sourceType: 'module',
-      },
-      plugins: ['@typescript-eslint'],
     }
   ]
 };
